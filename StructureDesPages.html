@@ -26,7 +26,7 @@
 <body>
     <h1>Sitemap - Structure des pages</h1>
     <div class="mermaid">
-        flowchart TD
+        flowchart TB
         MenuNavigation["Menu Navigation"]
         PageAccueil["Page Accueil"]
         PageContact["Page Contact"]
@@ -53,6 +53,7 @@
         TemplatePagesDesProjets --> TemplatePagesDesCompetences
 
         subgraph PageAccueil
+            direction TB
             Hero["Hero - Préparez votre avenir"]
             Engagement["Notre engagement"]
             Projets["Les projets réalisés"]
@@ -64,12 +65,14 @@
         end
 
         subgraph PageContact
+            direction TB
             Telephone["Téléphone"]
             Mail["Mail"]
             Formulaire["Formulaire de contact"]
         end
 
         subgraph PageChoisissezVotreParcours
+            direction TB
             IntroductionParcours["Introduction"]
             Alternance["Formations en Alternance"]
             Diplome["Formations Diplômantes"]
@@ -79,6 +82,7 @@
         end
 
         subgraph PageSolutionsPourEntreprises
+            direction TB
             IntroductionEntreprises["Introduction"]
             Recrutement["Recrutez des Talents en Alternance"]
             BoostCompetences["Boostez les Compétences de vos équipes"]
@@ -90,12 +94,14 @@
         end
 
         subgraph PagePiliersBlog
+            direction TB
             DerniersArticles["Présentation des derniers articles"]
             ArticleCard["Carte d'article"]
             CTABlog["CTA - Lire l'article complet"]
         end
 
         subgraph PageArticlesBlog
+            direction TB
             TitreArticle["Titre de l'article"]
             SousTitreArticle["Sous-titre de l'article"]
             Chapo["Chapo"]
@@ -106,6 +112,7 @@
         end
 
         subgraph NosDomainesDExpertise
+            direction TB
             SitesWeb["Création de sites web et applications mobiles"]
             Graphisme["Conception graphique et design digital"]
             Communication["Stratégies de communication et marketing digital"]
@@ -117,6 +124,7 @@
         end
 
         subgraph TemplatePagesDesCompetences
+            direction TB
             TitreCompetence["Titre de la compétence"]
             Metiers["Liste des métiers possibles"]
             FormationDiplomante["Formation diplômante"]
@@ -126,6 +134,7 @@
         end
 
         subgraph TemplatePagesDesProjets
+            direction TB
             NomProjet["Nom du projet"]
             DetailsProjet["Détails du projet"]
             ImagesProjet["Images de présentation"]
