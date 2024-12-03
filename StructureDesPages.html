@@ -27,33 +27,34 @@
     <h1>Sitemap - Structure des pages</h1>
     <div class="mermaid">
         flowchart TB
-        MenuNavigation["Menu Navigation"]
-        PageAccueil["Page Accueil"]
-        PageContact["Page Contact"]
-        PageChoisissezVotreParcours["Choisissez Votre Parcours"]
-        PageSolutionsPourEntreprises["Solutions pour Entreprises"]
-        PagePiliersBlog["Blog Ressources et Conseils"]
-        NosDomainesDExpertise["Nos Domaines D'Expertise"]
-        TemplatePagesDesCompetences["Pages des Compétences"]
-        TemplatePagesDesProjets["Pages des Projets"]
-        PageArticlesBlog["Articles Blog"]
+        Menu_Navigation["Menu Navigation"]
+        Page_Accueil["Page Accueil"]
+        Page_Contact["Page Contact"]
+        Page_Choisissez_Votre_Parcours["Choisissez Votre Parcours"]
+        Page_Solutions_Pour_Entreprises["Solutions pour Entreprises"]
+        Page_Piliers_Blog["Blog Ressources et Conseils"]
+        Nos_Domaines_D_Expertise["Nos Domaines D'Expertise"]
+        Template_Pages_Des_Competences["Pages des Compétences"]
+        Template_Pages_Des_Projets["Pages des Projets"]
+        Template_Page_Articles_Blog["Articles Blog"]
 
-        MenuNavigation --> PageAccueil
-        MenuNavigation --> PageContact
-        MenuNavigation --> PageChoisissezVotreParcours
-        MenuNavigation --> PageSolutionsPourEntreprises
-        MenuNavigation --> PagePiliersBlog
-        PageAccueil --> NosDomainesDExpertise
-        PageAccueil --> TemplatePagesDesProjets
-        PagePiliersBlog --> PageArticlesBlog
-        PageArticlesBlog --> TemplatePagesDesCompetences
-        NosDomainesDExpertise --> TemplatePagesDesCompetences
-        TemplatePagesDesCompetences --> PageChoisissezVotreParcours
-        TemplatePagesDesCompetences --> PageSolutionsPourEntreprises
-        TemplatePagesDesProjets --> TemplatePagesDesCompetences
+        Menu_Navigation --> Page_Accueil
+        Menu_Navigation --> Page_Contact
+        Menu_Navigation --> Page_Choisissez_Votre_Parcours
+        Menu_Navigation --> Page_Solutions_Pour_Entreprises
+        Menu_Navigation --> Page_Piliers_Blog
+        Page_Accueil --> Template_Pages_Des_Competences
+        Page_Accueil --> Template_Pages_Des_Projets
+        Page_Piliers_Blog --> Template_Page_Articles_Blog
+       Template_Page_Articles_Blog --> Template_Pages_Des_Competences
+       Template_Pages_Des_Projets --> Template_Pages_Des_Competences
+       Template_Pages_Des_Competences --> Page_Choisissez_Votre_Parcours
+       Template_Pages_Des_Competences --> Page_Solutions_Pour_Entreprises
+       Nos_Domaines_D_Expertise --> Template_Pages_Des_Competences
+        
 
-        subgraph PageAccueil
-            direction TB
+        subgraph Page_Accueil
+            direction LR
             Hero["Hero - Préparez votre avenir"]
             Engagement["Notre engagement"]
             Projets["Les projets réalisés"]
@@ -64,15 +65,15 @@
             CTAAccueil["CTA - Parlez à un conseiller"]
         end
 
-        subgraph PageContact
-            direction TB
+        subgraph Page_Contact
+            direction LR
             Telephone["Téléphone"]
             Mail["Mail"]
             Formulaire["Formulaire de contact"]
         end
 
-        subgraph PageChoisissezVotreParcours
-            direction TB
+        subgraph Page_Choisissez_Votre_Parcours
+            direction LR
             IntroductionParcours["Introduction"]
             Alternance["Formations en Alternance"]
             Diplome["Formations Diplômantes"]
@@ -81,8 +82,8 @@
             FAQParcours["FAQ"]
         end
 
-        subgraph PageSolutionsPourEntreprises
-            direction TB
+        subgraph Page_Solutions_Pour_Entreprises
+            direction LR
             IntroductionEntreprises["Introduction"]
             Recrutement["Recrutez des Talents en Alternance"]
             BoostCompetences["Boostez les Compétences de vos équipes"]
@@ -93,15 +94,14 @@
             FAQEntreprises["FAQ"]
         end
 
-        subgraph PagePiliersBlog
-            direction TB
+        subgraph Page_Piliers_Blog
+            direction LR
             DerniersArticles["Présentation des derniers articles"]
-            ArticleCard["Carte d'article"]
-            CTABlog["CTA - Lire l'article complet"]
+            ArticleCard["Carte d'article / CTA - Lire l'article complet"]
         end
 
-        subgraph PageArticlesBlog
-            direction TB
+        subgraph Template_Page_Articles_Blog
+            direction LR
             TitreArticle["Titre de l'article"]
             SousTitreArticle["Sous-titre de l'article"]
             Chapo["Chapo"]
@@ -111,8 +111,8 @@
             CTAArticle["CTA - En savoir plus"]
         end
 
-        subgraph NosDomainesDExpertise
-            direction TB
+        subgraph Nos_Domaines_D_Expertise
+            direction LR
             SitesWeb["Création de sites web et applications mobiles"]
             Graphisme["Conception graphique et design digital"]
             Communication["Stratégies de communication et marketing digital"]
@@ -123,8 +123,8 @@
             Modelisation["Conception et modélisation technique et architecturale"]
         end
 
-        subgraph TemplatePagesDesCompetences
-            direction TB
+        subgraph Template_Pages_Des_Competences
+            direction LR
             TitreCompetence["Titre de la compétence"]
             Metiers["Liste des métiers possibles"]
             FormationDiplomante["Formation diplômante"]
@@ -133,14 +133,25 @@
             CTACompetence["CTA - Découvrez comment démarrer"]
         end
 
-        subgraph TemplatePagesDesProjets
-            direction TB
+        subgraph Template_Pages_Des_Projets
+            direction LR
             NomProjet["Nom du projet"]
             DetailsProjet["Détails du projet"]
             ImagesProjet["Images de présentation"]
             DeroulementProjet["Déroulement du projet"]
             CTAProjet["CTA - Travailler avec nous"]
         end
+
+        style Page_Accueil fill:#e6f7ff,stroke:#333,stroke-width:1p
+        style Page_Piliers_Blog fill:#e6f7ff,stroke:#333,stroke-width:1p
+        style Page_Contact fill:#e6f7ff,stroke:#333,stroke-width:1p
+        style Page_Solutions_Pour_Entreprises fill:#e6f7ff,stroke:#333,stroke-width:1p
+        style Page_Choisissez_Votre_Parcours fill:#e6f7ff,stroke:#333,stroke-width:1p
+
+
+        style Template_Page_Articles_Blog fill:#ffe6f7,stroke:#333,stroke-width:1px
+        style Template_Pages_Des_Competences fill:#ffe6f7,stroke:#333,stroke-width:1px
+        style Template_Pages_Des_Projets fill:#ffe6f7,stroke:#333,stroke-width:1px
     </div>
 </body>
 </html>
