@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitemap - Ma Solution Formation</title>
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            padding: 20px;
+        }
+        .mermaid {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>Sitemap - Structure du Site</h1>
+    <div class="mermaid">
+        flowchart TD
+        MenuNavigation["Menu Navigation"]
+        PageAccueil["Page Accueil"]
+        PageContact["Page Contact"]
+        PageChoisissezVotreParcours["Choisissez Votre Parcours"]
+        PageSolutionsPourEntreprises["Solutions pour Entreprises"]
+        PagePiliersBlog["Blog Ressources et Conseils"]
+        NosDomainesDExpertise["Nos Domaines D'Expertise"]
+        TemplatePagesDesCompetences["Pages des Compétences"]
+        TemplatePagesDesProjets["Pages des Projets"]
+        PageArticlesBlog["Articles Blog"]
+
+        MenuNavigation --> PageAccueil
+        MenuNavigation --> PageContact
+        MenuNavigation --> PageChoisissezVotreParcours
+        MenuNavigation --> PageSolutionsPourEntreprises
+        MenuNavigation --> PagePiliersBlog
+        PageAccueil --> NosDomainesDExpertise
+        PageAccueil --> TemplatePagesDesProjets
+        PagePiliersBlog --> PageArticlesBlog
+        PageArticlesBlog --> TemplatePagesDesCompetences
+        NosDomainesDExpertise --> TemplatePagesDesCompetences
+        TemplatePagesDesCompetences --> PageChoisissezVotreParcours
+        TemplatePagesDesCompetences --> PageSolutionsPourEntreprises
+        TemplatePagesDesProjets --> TemplatePagesDesCompetences
+    </div>
+</body>
+</html>
