@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sitemap - Structure des pages</title>
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+            padding: 20px;
+        }
+        .mermaid {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>Sitemap - Structure des pages</h1>
+    <div class="mermaid">
+        flowchart TD
+        MenuNavigation["Menu Navigation"]
+        PageAccueil["Page Accueil"]
+        PageContact["Page Contact"]
+        PageChoisissezVotreParcours["Choisissez Votre Parcours"]
+        PageSolutionsPourEntreprises["Solutions pour Entreprises"]
+        PagePiliersBlog["Blog Ressources et Conseils"]
+        NosDomainesDExpertise["Nos Domaines D'Expertise"]
+        TemplatePagesDesCompetences["Pages des Compétences"]
+        TemplatePagesDesProjets["Pages des Projets"]
+        PageArticlesBlog["Articles Blog"]
+
+        MenuNavigation --> PageAccueil
+        MenuNavigation --> PageContact
+        MenuNavigation --> PageChoisissezVotreParcours
+        MenuNavigation --> PageSolutionsPourEntreprises
+        MenuNavigation --> PagePiliersBlog
+        PageAccueil --> NosDomainesDExpertise
+        PageAccueil --> TemplatePagesDesProjets
+        PagePiliersBlog --> PageArticlesBlog
+        PageArticlesBlog --> TemplatePagesDesCompetences
+        NosDomainesDExpertise --> TemplatePagesDesCompetences
+        TemplatePagesDesCompetences --> PageChoisissezVotreParcours
+        TemplatePagesDesCompetences --> PageSolutionsPourEntreprises
+        TemplatePagesDesProjets --> TemplatePagesDesCompetences
+
+        subgraph PageAccueil
+            Hero["Hero - Préparez votre avenir"]
+            Engagement["Notre engagement"]
+            Projets["Les projets réalisés"]
+            Expertise["Nos domaines d'expertise"]
+            Accreditations["Nos accréditations"]
+            Partenaires["Nos partenaires"]
+            Temoignages["Témoignages"]
+            CTAAccueil["CTA - Parlez à un conseiller"]
+        end
+
+        subgraph PageContact
+            Telephone["Téléphone"]
+            Mail["Mail"]
+            Formulaire["Formulaire de contact"]
+        end
+
+        subgraph PageChoisissezVotreParcours
+            IntroductionParcours["Introduction"]
+            Alternance["Formations en Alternance"]
+            Diplome["Formations Diplômantes"]
+            ModulesCarte["Modules à la Carte"]
+            CTAParcours["CTA - Contactez-nous"]
+            FAQParcours["FAQ"]
+        end
+
+        subgraph PageSolutionsPourEntreprises
+            IntroductionEntreprises["Introduction"]
+            Recrutement["Recrutez des Talents en Alternance"]
+            BoostCompetences["Boostez les Compétences de vos équipes"]
+            Financement["Formation Finançable avec Ocapiat"]
+            FormationsSpecialisees["Formations Spécialisées"]
+            TemoignagesEntreprises["Témoignages"]
+            CTAEntreprises["CTA - Discutons de vos besoins"]
+            FAQEntreprises["FAQ"]
+        end
+
+        subgraph PagePiliersBlog
+            DerniersArticles["Présentation des derniers articles"]
+            ArticleCard["Carte d'article"]
+            CTABlog["CTA - Lire l'article complet"]
+        end
+
+        subgraph PageArticlesBlog
+            TitreArticle["Titre de l'article"]
+            SousTitreArticle["Sous-titre de l'article"]
+            Chapo["Chapo"]
+            ImageArticle["Image mise en avant"]
+            CorpsArticle["Corps de l'article"]
+            CompetencesLiees["Compétences liées à l'article"]
+            CTAArticle["CTA - En savoir plus"]
+        end
+
+        subgraph NosDomainesDExpertise
+            SitesWeb["Création de sites web et applications mobiles"]
+            Graphisme["Conception graphique et design digital"]
+            Communication["Stratégies de communication et marketing digital"]
+            Interfaces["Développement d'interfaces et fonctionnalités"]
+            JeuxVideo["Conception et développement de jeux vidéo"]
+            Video["Création et édition de contenus vidéo"]
+            GestionProjets["Gestion et coordination de projets digitaux"]
+            Modelisation["Conception et modélisation technique et architecturale"]
+        end
+
+        subgraph TemplatePagesDesCompetences
+            TitreCompetence["Titre de la compétence"]
+            Metiers["Liste des métiers possibles"]
+            FormationDiplomante["Formation diplômante"]
+            ModulesFormation["Nos modules de formation"]
+            ParcoursCompetence["Choisissez votre parcours"]
+            CTACompetence["CTA - Découvrez comment démarrer"]
+        end
+
+        subgraph TemplatePagesDesProjets
+            NomProjet["Nom du projet"]
+            DetailsProjet["Détails du projet"]
+            ImagesProjet["Images de présentation"]
+            DeroulementProjet["Déroulement du projet"]
+            CTAProjet["CTA - Travailler avec nous"]
+        end
+    </div>
+</body>
+</html>
